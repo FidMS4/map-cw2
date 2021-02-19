@@ -35,17 +35,18 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.favorite),
+                leading: Icon(Icons.favorite, color: Colors.red[500]),
                 title: Text('Favorites', style: TextStyle(fontSize: 20.0)),
-               //onTap: () => Navigator.pushNamed(context, FavoritesScreen.routeName),
+                onTap: () {},
+                //onTap: () => Navigator.pushNamed(context, FavoritesScreen.routeName),
               ),
               ListTile(
-                leading: Icon(Icons.help_center),
+                leading: Icon(Icons.help_center, color: Colors.yellow),
                 title: Text('Help', style: TextStyle(fontSize: 20.0)),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.exit_to_app),
+                leading: Icon(Icons.exit_to_app, color: Colors.blue),
                 title: Text('Sign Out', style: TextStyle(fontSize: 20.0)),
                 onTap: () {},
               ),
@@ -57,86 +58,73 @@ class HomeScreen extends StatelessWidget {
             Center(
                 child: Text('Please choose a category',
                     style: Theme.of(context).textTheme.headline1)),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, ActionAdventureScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Action / Adventure',
-                      style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () =>
+                    Navigator.pushNamed(context, ActionAdventureScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Action / Adventure',
+                    style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, ComedyScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Comedy', style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, ComedyScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Comedy', style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, CrimeScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Crime', style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, CrimeScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Crime', style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, DramaScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Drama', style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, DramaScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Drama', style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, HorrorScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Horror / Thriller',
-                      style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, HorrorScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Horror / Thriller',
+                    style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, MusicalScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text('Musical', style: Theme.of(context).textTheme.headline1),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
-                ),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, MusicalScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text('Musical', style: Theme.of(context).textTheme.headline1),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
-            InkWell(
-              onTap: () => Navigator.pushNamed(context, SciFiScreen.routeName),
-              child: Card(
-                child: ListTile(
-                  tileColor: Colors.grey[850],
-                  leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                  title: Text(
-                    'Sci-Fi / Fantasy',
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                  trailing: Icon(Icons.arrow_forward, size: 30.0),
+            Card(
+              child: ListTile(
+                onTap: () => Navigator.pushNamed(context, SciFiScreen.routeName),
+                tileColor: Colors.grey[850],
+                leading: Icon(Icons.movie_filter_outlined, size: 40.0),
+                title: Text(
+                  'Sci-Fi / Fantasy',
+                  style: Theme.of(context).textTheme.headline1,
                 ),
+                trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
           ],
