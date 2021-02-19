@@ -3,6 +3,7 @@ import 'package:CreativeWork2/screen/actionadventure_screen.dart';
 import 'package:CreativeWork2/screen/comedy_screen.dart';
 import 'package:CreativeWork2/screen/crime_screen.dart';
 import 'package:CreativeWork2/screen/drama_screen.dart';
+import 'package:CreativeWork2/screen/help_screen.dart';
 //import 'package:CreativeWork2/screen/favorites_screen.dart';
 import 'package:CreativeWork2/screen/horrorthriller_screen.dart';
 import 'package:CreativeWork2/screen/musical_screen.dart';
@@ -43,12 +44,14 @@ class HomeScreen extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.help_center, color: Colors.yellow),
                 title: Text('Help', style: TextStyle(fontSize: 20.0)),
-                onTap: () {},
+                onTap: () => Navigator.pushNamed(context, HelpScreen.routeName),
               ),
               ListTile(
                 leading: Icon(Icons.exit_to_app, color: Colors.blue),
                 title: Text('Sign Out', style: TextStyle(fontSize: 20.0)),
-                onTap: () {},
+                onTap: () => Navigator.of(context).pushNamedAndRemoveUntil(
+                    '/signInScreen',
+                    (Route<dynamic> route) => false), //clears text from switching screens
               ),
             ],
           ),
@@ -120,10 +123,8 @@ class HomeScreen extends StatelessWidget {
                 onTap: () => Navigator.pushNamed(context, SciFiScreen.routeName),
                 tileColor: Colors.grey[850],
                 leading: Icon(Icons.movie_filter_outlined, size: 40.0),
-                title: Text(
-                  'Sci-Fi / Fantasy',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
+                title: Text('Sci-Fi / Fantasy',
+                    style: Theme.of(context).textTheme.headline1),
                 trailing: Icon(Icons.arrow_forward, size: 30.0),
               ),
             ),
