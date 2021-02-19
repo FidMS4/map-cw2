@@ -48,7 +48,9 @@ class _Controller {
   List<Widget> getMovieList() {
     return actionAdventureList.map((movie) {
       return InkWell(
-        onDoubleTap: () {},
+        onDoubleTap: () {
+          _flipPic();
+        },
         child: Column(
           children: [
             Container(
@@ -73,4 +75,6 @@ class _Controller {
       );
     }).toList();
   }
+
+  void _flipPic() {}
 }

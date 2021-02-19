@@ -6,6 +6,7 @@ import 'package:CreativeWork2/screen/home_screen.dart';
 import 'package:CreativeWork2/screen/horrorthriller_screen.dart';
 import 'package:CreativeWork2/screen/musical_screen.dart';
 import 'package:CreativeWork2/screen/scifantasy_screen.dart';
+import 'package:CreativeWork2/screen/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -37,8 +38,9 @@ class CreativeWork2App extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SignInScreen.routeName,
       routes: {
+        SignInScreen.routeName: (context) => SignInScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         ActionAdventureScreen.routeName: (context) => ActionAdventureScreen(),
         ComedyScreen.routeName: (context) => ComedyScreen(),

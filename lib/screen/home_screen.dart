@@ -114,12 +114,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(75.0),
-            child: Text(
-              "All trivia courtesy of IMDb.com",
-            ),
-          )
         ],
       ),
     );
