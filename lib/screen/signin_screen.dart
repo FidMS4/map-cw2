@@ -28,8 +28,10 @@ class _SignInState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding:
+          false, //added to not make background push up with keyboard
       appBar: AppBar(
-        title: Text('Sign In', style: Theme.of(context).textTheme.headline6),
+        title: Text('Movie Favorites App', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],
       ),
       body: Container(
@@ -61,8 +63,11 @@ class _SignInState extends State<SignInScreen> {
                       decoration: InputDecoration(
                         labelText: 'Username',
                         labelStyle: TextStyle(
-                            fontFamily: 'Jomhuria', fontSize: 30.0, color: Colors.white),
+                            fontFamily: 'Jomhuria', fontSize: 28.0, color: Colors.white),
                         hintText: 'Enter username',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
                       ),
                       autocorrect: false,
                       onSaved: con.saveUsername,
@@ -71,8 +76,11 @@ class _SignInState extends State<SignInScreen> {
                       decoration: InputDecoration(
                         labelText: 'Password',
                         labelStyle: TextStyle(
-                            fontFamily: 'Jomhuria', fontSize: 30.0, color: Colors.white),
+                            fontFamily: 'Jomhuria', fontSize: 28.0, color: Colors.white),
                         hintText: 'Enter password',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
                       ),
                       obscureText: true,
                       autocorrect: false,

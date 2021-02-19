@@ -1,3 +1,4 @@
+import 'package:CreativeWork2/model/mysignin.dart';
 import 'package:CreativeWork2/screen/actionadventure_screen.dart';
 import 'package:CreativeWork2/screen/comedy_screen.dart';
 import 'package:CreativeWork2/screen/crime_screen.dart';
@@ -7,10 +8,13 @@ import 'package:CreativeWork2/screen/musical_screen.dart';
 import 'package:CreativeWork2/screen/scifantasy_screen.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   static const routeName = '/homeScreen';
+  UserRecord user;
   @override
   Widget build(BuildContext context) {
+    user = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text('Categories', style: Theme.of(context).textTheme.headline6),
@@ -19,20 +23,20 @@ class HomeScreen extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
-              child: Text('By Fidel Munoz', style: TextStyle(fontSize: 30.0)),
+            Container(
+              color: Colors.red[900],
+              height: 55.0,
+              child: DrawerHeader(
+                child: Text('Welcome, ${user.name}!', style: TextStyle(fontSize: 22.0)),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Favorites', style: TextStyle(fontSize: 20.0)),
             ),
             ListTile(
               leading: Icon(Icons.help_center),
-              title: Text('Help'),
-            ),
-            ListTile(
-              leading: Icon(Icons.thumb_up),
-              title: Text('Rate'),
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              title: Text('Help', style: TextStyle(fontSize: 20.0)),
             ),
           ],
         ),

@@ -1,18 +1,3 @@
-enum Classification {
-  Freshman,
-  Sophomore,
-  Junior,
-  Senior,
-  Graduate,
-}
-
-enum Major {
-  CS,
-  SE,
-  DS,
-  Other,
-}
-
 class UserRecord {
   String username;
   String password;
