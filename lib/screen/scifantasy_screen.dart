@@ -28,6 +28,7 @@ class _SciFiState extends State<SciFiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('SciFi / Fantasy', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],

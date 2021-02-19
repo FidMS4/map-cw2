@@ -28,6 +28,7 @@ class _CrimeState extends State<CrimeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Crime', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],

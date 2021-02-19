@@ -28,6 +28,7 @@ class _HorrorState extends State<HorrorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Horror / Thriller', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],

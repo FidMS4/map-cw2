@@ -28,6 +28,7 @@ class _MusicalState extends State<MusicalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Musical', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],

@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     user = ModalRoute.of(context).settings.arguments;
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Categories', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],
