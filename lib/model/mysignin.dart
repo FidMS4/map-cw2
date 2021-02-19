@@ -16,9 +16,6 @@ class UserRecord {
     this.password = user.password;
     this.name = user.name;
     this.phone = user.phone;
-    //this.languages = user.languages;   // shallow copy reference
-    // this.languages = {};
-    // Language.values.forEach((e) => this.languages[e] = user.languages[e]); // deep copy
   }
 
   void assign(UserRecord user) {
@@ -26,9 +23,6 @@ class UserRecord {
     this.password = user.password;
     this.name = user.name;
     this.phone = user.phone;
-    //this.languages = user.languages;   // shallow copy reference
-    // this.languages = {};
-    // Language.values.forEach((e) => this.languages[e] = user.languages[e]); // deep copy
   }
 
   @override

@@ -52,6 +52,7 @@ class _Controller {
         onDoubleTap: () {
           _flipPic();
         },
+        onLongPress: () {},
         child: Column(
           children: [
             Container(
