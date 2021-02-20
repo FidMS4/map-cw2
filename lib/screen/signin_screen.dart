@@ -123,7 +123,7 @@ class _Controller {
         orElse: () => null);
 
     if (user == null) {
-      state.render(() => state.error = 'not a valid username');
+      state.render(() => state.error = 'not a valid login');
     } else {
       state.render(() => state.error = null);
       Navigator.pushNamed(state.context, HomeScreen.routeName, arguments: user);

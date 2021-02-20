@@ -5,16 +5,29 @@ class HelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Help Screen', style: Theme.of(context).textTheme.headline6),
+        backgroundColor: Colors.red[900],
       ),
-      body: Column(
-        children: [
-          Text(
-            'Please choose any category from the main screen. Use the top right icon to add to favorite list after highlighting the desired movie posters. Highlight by long pressing the posters.',
-            style: Theme.of(context).textTheme.headline6,
+      body: Card(
+        color: Colors.yellow,
+        elevation: 25.0,
+        margin: EdgeInsets.all(12.0),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
+        shadowColor: Colors.red[900],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Please choose any category from the main screen. Select a poster by long pressing it, then click on the top right icon to save it/them to the Favorites page located in the drawer.',
+            style: TextStyle(
+              fontFamily: 'Federo',
+              fontSize: 25.0,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ],
+        ),
       ),
     );
   }
