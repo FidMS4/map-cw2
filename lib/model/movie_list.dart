@@ -242,6 +242,13 @@ var musicalList = [
     imageURL:
         'https://m.media-amazon.com/images/M/MV5BMjI1NDYzNzY2Ml5BMl5BanBnXkFtZTgwODQwODczNTM@._V1_.jpg',
   ),
+  Movie(
+    title: Text('Walk the Line (2005)', style: TextStyle(fontSize: 20.0)),
+    stars: 4,
+    halfStar: 0,
+    imageURL:
+        'https://i.pinimg.com/originals/30/15/01/3015018efcb8b29e3b690106878658de.jpg',
+  ),
 ];
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------
