@@ -2,8 +2,8 @@ import 'package:CreativeWork2/screen/actionadventure_screen.dart';
 import 'package:CreativeWork2/screen/comedy_screen.dart';
 import 'package:CreativeWork2/screen/crime_screen.dart';
 import 'package:CreativeWork2/screen/drama_screen.dart';
+import 'package:CreativeWork2/screen/favorites_screen.dart';
 import 'package:CreativeWork2/screen/help_screen.dart';
-//import 'package:CreativeWork2/screen/favorites_screen.dart';
 import 'package:CreativeWork2/screen/home_screen.dart';
 import 'package:CreativeWork2/screen/horrorthriller_screen.dart';
 import 'package:CreativeWork2/screen/musical_screen.dart';
@@ -51,7 +51,7 @@ class CreativeWork2App extends StatelessWidget {
         HorrorScreen.routeName: (context) => HorrorScreen(),
         MusicalScreen.routeName: (context) => MusicalScreen(),
         SciFiScreen.routeName: (context) => SciFiScreen(),
-        //FavoritesScreen.routeName: (context) => FavoritesScreen(),
+        FavoritesScreen.routeName: (context) => FavoritesScreen(),
         HelpScreen.routeName: (context) => HelpScreen(),
       },
     );

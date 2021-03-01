@@ -32,6 +32,14 @@ class _ActionAdventureState extends State<ActionAdventureScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        actions: con.selected != null
+            ? [
+                IconButton(
+                  icon: Icon(Icons.favorite_sharp, color: Colors.blue),
+                  onPressed: con.addFavorites,
+                ),
+              ]
+            : null,
         title: Text(
           'Action / Adventure',
           style: TextStyle(
@@ -124,11 +132,19 @@ class _Controller {
         if (selected.indexOf(index) < 0) {
           selected.add(index);
         } else {
-          //cancel the selection
           selected.removeWhere((value) => value == index);
           if (selected.length == 0) selected = null;
         }
       });
     }
+  }
+
+  void addFavorites() {
+    state.render(() {
+      for (int i = selected.length - 1; i >= 0; i--) {
+        favoritesList.insert(selected[i], actionAdventureList.elementAt(selected[i]));
+      }
+      selected = null;
+    });
   }
 }

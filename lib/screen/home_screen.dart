@@ -4,7 +4,7 @@ import 'package:CreativeWork2/screen/comedy_screen.dart';
 import 'package:CreativeWork2/screen/crime_screen.dart';
 import 'package:CreativeWork2/screen/drama_screen.dart';
 import 'package:CreativeWork2/screen/help_screen.dart';
-//import 'package:CreativeWork2/screen/favorites_screen.dart';
+import 'package:CreativeWork2/screen/favorites_screen.dart';
 import 'package:CreativeWork2/screen/horrorthriller_screen.dart';
 import 'package:CreativeWork2/screen/musical_screen.dart';
 import 'package:CreativeWork2/screen/scifantasy_screen.dart';
@@ -38,8 +38,7 @@ class HomeScreen extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.favorite, color: Colors.red[500]),
                 title: Text('Favorites', style: TextStyle(fontSize: 20.0)),
-                onTap: () {},
-                //onTap: () => Navigator.pushNamed(context, FavoritesScreen.routeName),
+                onTap: () => Navigator.pushNamed(context, FavoritesScreen.routeName),
               ),
               ListTile(
                 leading: Icon(Icons.help_center, color: Colors.yellow),

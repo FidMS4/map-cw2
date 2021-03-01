@@ -14,6 +14,8 @@ class Movie {
   });
 }
 
+var favoritesList = [];
+
 var actionAdventureList = [
   Movie(
     title: Text('American Sniper (2014)', style: TextStyle(fontSize: 20.0)),

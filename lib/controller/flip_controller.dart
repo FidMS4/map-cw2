@@ -14,7 +14,8 @@ class FlipPoster extends StatefulWidget {
 }
 
 class FlipPosterState extends State<FlipPoster>
-    with SingleTickerProviderStateMixin<FlipPoster> { //had to add <FlipPoster>
+    with SingleTickerProviderStateMixin<FlipPoster> {
+  //had to add <FlipPoster>
   Animation _animation;
   AnimationController _controller;
 
@@ -30,7 +31,7 @@ class FlipPosterState extends State<FlipPoster>
     return AnimatedBuilder(
       animation: _controller,
       builder: (BuildContext context, Widget child) {
-        bool isFront = _controller.value < .5;
+        bool frontSide = _controller.value < .5;
         return InkWell(
           onTap: () {
             if (_animation.isDismissed) {
@@ -42,9 +43,9 @@ class FlipPosterState extends State<FlipPoster>
           child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.001)
-              ..rotateY(pi * _animation.value + (isFront ? 0 : pi)),
+              ..rotateY(pi * _animation.value + (frontSide ? 0 : pi)),
             alignment: FractionalOffset.center,
-            child: isFront ? widget.front : widget.back,
+            child: frontSide ? widget.front : widget.back,
           ),
         );
       },
