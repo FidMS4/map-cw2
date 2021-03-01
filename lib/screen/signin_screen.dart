@@ -31,7 +31,7 @@ class _SignInState extends State<SignInScreen> {
       resizeToAvoidBottomPadding:
           false, //added to not make background push up with keyboard
       appBar: AppBar(
-        title: Text('Movie Favorites App', style: Theme.of(context).textTheme.headline6),
+        title: Text('Flick View', style: Theme.of(context).textTheme.headline6),
         backgroundColor: Colors.red[900],
       ),
       body: Container(
