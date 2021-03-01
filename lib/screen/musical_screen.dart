@@ -1,6 +1,6 @@
+import 'package:CreativeWork2/controller/flip_controller.dart';
 import 'package:CreativeWork2/model/backside.dart';
 import 'package:CreativeWork2/model/movie_list.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 
 final double posterHeight = 425.0;
@@ -51,8 +51,8 @@ class _Controller {
   List<int> selected;
   final Color selectedColor = Colors.blueGrey[700];
   final Color unselectedColor = Colors.black;
-  final List<GlobalObjectKey<FlipCardState>> formKeyList =
-      List.generate(7, (index) => GlobalObjectKey<FlipCardState>(index));
+  final List<GlobalObjectKey<FlipPosterState>> formKeyList =
+      List.generate(7, (index) => GlobalObjectKey<FlipPosterState>(index));
 
   Widget getMovieList(BuildContext context, int index) {
     return InkWell(
@@ -66,7 +66,7 @@ class _Controller {
             : unselectedColor,
         child: Column(
           children: [
-            FlipCard(
+            FlipPoster(
               front: Container(
                 height: posterHeight,
                 width: posterWidth,
