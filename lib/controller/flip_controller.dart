@@ -1,3 +1,6 @@
+// code modified and recieved from https://github.com/fedeoo/flip_card/blob/master/lib/flip_card.dart
+// and also from https://dartpad.dev/1908f087952174904e3d2ef7d6947dce
+
 import 'dart:math';
 import 'package:flutter/material.dart';
 
@@ -11,7 +14,7 @@ class FlipPoster extends StatefulWidget {
 }
 
 class FlipPosterState extends State<FlipPoster>
-    with SingleTickerProviderStateMixin<FlipPoster> {
+    with SingleTickerProviderStateMixin<FlipPoster> { //had to add <FlipPoster>
   Animation _animation;
   AnimationController _controller;
 

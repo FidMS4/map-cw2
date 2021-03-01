@@ -26,8 +26,7 @@ var actionAdventureList = [
     title: Text('Django Unchained (2012)', style: TextStyle(fontSize: 20.0)),
     stars: 4,
     halfStar: 0,
-    imageURL:
-        'https://images-na.ssl-images-amazon.com/images/I/81Z%2BlBcAYWL._SY445_.jpg',
+    imageURL: 'https://images-na.ssl-images-amazon.com/images/I/51dNfU53lNL._AC_.jpg',
   ),
   Movie(
     title: Text('Dunkirk (2017)', style: TextStyle(fontSize: 20.0)),
@@ -71,7 +70,7 @@ var comedyList = [
     title: Text('Anchorman (2004)', style: TextStyle(fontSize: 20.0)),
     stars: 4,
     halfStar: 0,
-    imageURL: 'https://images-na.ssl-images-amazon.com/images/I/51gbWRaL0IL.jpg',
+    imageURL: 'https://images-na.ssl-images-amazon.com/images/I/51jNgDex5IL._AC_.jpg',
   ),
   Movie(
     title: Text('Dumb and Dumber (1994)', style: TextStyle(fontSize: 20.0)),
