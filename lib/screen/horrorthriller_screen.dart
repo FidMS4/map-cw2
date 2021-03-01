@@ -1,4 +1,6 @@
+import 'package:CreativeWork2/model/backside.dart';
 import 'package:CreativeWork2/model/movie_list.dart';
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 
 final double posterHeight = 425.0;
@@ -49,9 +51,12 @@ class _Controller {
   List<int> selected;
   final Color selectedColor = Colors.blueGrey[700];
   final Color unselectedColor = Colors.black;
+  final List<GlobalObjectKey<FlipCardState>> formKeyList =
+      List.generate(7, (index) => GlobalObjectKey<FlipCardState>(index));
 
   Widget getMovieList(BuildContext context, int index) {
     return InkWell(
+      key: formKeyList[index],
       onLongPress: () {
         _longPress(context, index);
       },
@@ -61,10 +66,30 @@ class _Controller {
             : unselectedColor,
         child: Column(
           children: [
-            Container(
-              height: posterHeight,
-              width: posterWidth,
-              child: Image.network(horrorList[index].imageURL),
+            FlipCard(
+              front: Container(
+                height: posterHeight,
+                width: posterWidth,
+                child: Image.network(horrorList[index].imageURL),
+              ),
+              back: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 2.0),
+                ),
+                height: posterHeight,
+                width: posterWidth,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      horrorListBackside[index].gif,
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: horrorListBackside[index].summary,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),

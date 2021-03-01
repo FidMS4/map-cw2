@@ -77,8 +77,7 @@ var comedyList = [
     title: Text('Dumb and Dumber (1994)', style: TextStyle(fontSize: 20.0)),
     stars: 4,
     halfStar: 0,
-    imageURL:
-        'https://m.media-amazon.com/images/M/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY1200_CR93,0,630,1200_AL_.jpg',
+    imageURL: 'https://images-na.ssl-images-amazon.com/images/I/51S3Zvx7kGL._AC_.jpg',
   ),
   Movie(
     title: Text('Knives Out (2019)', style: TextStyle(fontSize: 20.0)),
