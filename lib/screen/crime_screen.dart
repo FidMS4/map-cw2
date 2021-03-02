@@ -138,7 +138,7 @@ class _Controller {
   void addFavorites() {
     state.render(() {
       for (int i = 0; i <= selected.length - 1; i++) {
-        favoritesList.insert(selected[i], crimeList.elementAt(selected[i]));
+        favoritesList.add(crimeList.elementAt(selected[i]));
       }
       selected = null;
     });

@@ -43,7 +43,7 @@ class _ActionAdventureState extends State<ActionAdventureScreen> {
         title: Text(
           'Action / Adventure',
           style: TextStyle(
-              fontFamily: 'Federo', fontSize: 29.0, fontWeight: FontWeight.bold),
+              fontFamily: 'Federo', fontSize: 28.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.red[900],
       ),
@@ -142,7 +142,7 @@ class _Controller {
   void addFavorites() {
     state.render(() {
       for (int i = 0; i <= selected.length - 1; i++) {
-        favoritesList.insert(selected[i], actionAdventureList.elementAt(selected[i]));
+        favoritesList.add(actionAdventureList.elementAt(selected[i]));
       }
       selected = null;
     });

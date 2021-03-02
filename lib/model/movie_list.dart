@@ -14,7 +14,7 @@ class Movie {
   });
 }
 
-var favoritesList = [];
+var favoritesList = new List();
 
 var actionAdventureList = [
   Movie(
