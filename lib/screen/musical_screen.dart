@@ -137,7 +137,7 @@ class _Controller {
 
   void addFavorites() {
     state.render(() {
-      for (int i = selected.length - 1; i >= 0; i--) {
+      for (int i = 0; i <= selected.length - 1; i++) {
         favoritesList.insert(selected[i], musicalList.elementAt(selected[i]));
       }
       selected = null;

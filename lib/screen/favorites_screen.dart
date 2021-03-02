@@ -47,7 +47,7 @@ class _Controller {
       margin: EdgeInsets.all(10.0),
       color: Colors.blueGrey,
       elevation: 15.0,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -60,11 +60,14 @@ class _Controller {
                   child: favoritesList[index].title,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(15.0),
-                child: Image.network(
-                  favoritesList[index].imageURL,
-                  height: 70.0,
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(15.0),
+                  child: Image.network(
+                    favoritesList[index].imageURL,
+                    height: 70.0,
+                  ),
                 ),
               ),
             ],
