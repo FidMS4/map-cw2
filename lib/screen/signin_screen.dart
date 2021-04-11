@@ -32,7 +32,6 @@ class _SignInState extends State<SignInScreen> {
           false, //added to not make background push up with keyboard
       appBar: AppBar(
         title: Text('Flick View', style: Theme.of(context).textTheme.headline6),
-        backgroundColor: Colors.red[900],
       ),
       body: Container(
         decoration: BoxDecoration(

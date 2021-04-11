@@ -8,7 +8,6 @@ class HelpScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Help Screen', style: Theme.of(context).textTheme.headline6),
-        backgroundColor: Colors.red[900],
       ),
       body: Card(
         color: Colors.yellow,

@@ -3,7 +3,6 @@ import 'package:CreativeWork2/model/backside.dart';
 import 'package:CreativeWork2/model/movie_list.dart';
 import 'package:flutter/material.dart';
 
-final double posterHeight = 425.0;
 final double posterWidth = 280.0;
 
 class HorrorScreen extends StatefulWidget {
@@ -41,7 +40,6 @@ class _HorrorState extends State<HorrorScreen> {
               ]
             : null,
         title: Text('Horror / Thriller', style: Theme.of(context).textTheme.headline6),
-        backgroundColor: Colors.red[900],
       ),
       body: ListView.builder(
         padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 20.0),
@@ -76,7 +74,7 @@ class _Controller {
           children: [
             FlipPoster(
               front: Container(
-                height: posterHeight,
+                height: MediaQuery.of(context).size.height * 0.7,
                 width: posterWidth,
                 child: Image.network(horrorList[index].imageURL),
               ),
@@ -84,7 +82,7 @@ class _Controller {
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 2.0),
                 ),
-                height: posterHeight,
+                height: MediaQuery.of(context).size.height * 0.7,
                 width: posterWidth,
                 child: SingleChildScrollView(
                   child: Column(

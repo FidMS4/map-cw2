@@ -23,7 +23,6 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text('Categories', style: Theme.of(context).textTheme.headline6),
-          backgroundColor: Colors.red[900],
         ),
         drawer: Drawer(
           child: ListView(

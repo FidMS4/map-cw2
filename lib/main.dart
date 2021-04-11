@@ -27,6 +27,7 @@ class CreativeWork2App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
+        primaryColor: Colors.red[900],
         textTheme: TextTheme(
           headline6: TextStyle(
             fontFamily: 'Federo',

@@ -36,7 +36,6 @@ class _FavoritesState extends State<FavoritesScreen> {
               ]
             : null,
         title: Text('Favorites', style: Theme.of(context).textTheme.headline6),
-        backgroundColor: Colors.red[900],
       ),
       body: ListView.builder(
         itemCount: favoritesList.length,
